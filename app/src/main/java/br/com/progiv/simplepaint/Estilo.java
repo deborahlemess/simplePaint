@@ -15,6 +15,26 @@ public class Estilo {
         estiloLinha.setStrokeJoin(Paint.Join.ROUND);
         return estiloLinha;
         }
+
+    public static Paint getEstilosParaLinhaVermelha(){
+        Paint estiloLinhaVermelha = new Paint();
+        estiloLinhaVermelha.setAntiAlias(true);
+        estiloLinhaVermelha.setColor(Color.RED);
+        estiloLinhaVermelha.setStyle(Paint.Style.STROKE);
+        estiloLinhaVermelha.setStrokeWidth(4f);
+        estiloLinhaVermelha.setStrokeJoin(Paint.Join.ROUND);
+        return estiloLinhaVermelha;
     }
+
+    public static Paint getEstiloPessoal() {
+        Paint estiloLivre = new Paint();
+        estiloLivre.setAntiAlias(true);
+        estiloLivre.setColor(Color.CYAN);
+        estiloLivre.setStyle(Paint.Style.FILL);
+        estiloLivre.setStrokeWidth(24f);
+        estiloLivre.setStrokeJoin(Paint.Join.ROUND);
+        return estiloLivre;
+    }
+}
 
 

@@ -3,10 +3,12 @@ package br.com.progiv.simplepaint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 
@@ -19,6 +21,9 @@ public class ViewCanvas extends View{
     private int TOLERANCIA_MOVIMENTO = 5;
     private Linha linha;
 
+
+
+
     public ViewCanvas(Context context, @Nullable AttributeSet attrs) {
 
         super(context, attrs);
@@ -28,7 +33,20 @@ public class ViewCanvas extends View{
     //Inicializar os objetos
     private void inicializaObjetos(){
         path = new Path();
+
         linha = new Linha(getContext(), path);
+    }
+
+    public void inicializaObjetosVermelhos(){
+        path = new Path();
+        Paint paint = Estilo.getEstilosParaLinhaVermelha();
+        linha = new Linha(getContext(), path, paint);
+    }
+
+
+    public void inicializaObjetosPessoal(){
+        Paint paint = Estilo.getEstiloPessoal();
+        linha = new Linha(getContext(), path, paint);
     }
 
     //Controlar o início do toque
@@ -101,4 +119,6 @@ public class ViewCanvas extends View{
         return true;
 
     }
+
+
 }

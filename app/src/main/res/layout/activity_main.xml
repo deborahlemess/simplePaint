@@ -16,6 +16,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="LimparDesenho"
-        android:text="@string/limpar"/>/>
+        android:text="@string/limpar"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="corVermelha"
+        android:text="@string/corVermelha"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="estiloPessoal"
+        android:text="@string/estiloPessoal"
+        />
 </LinearLayout>
